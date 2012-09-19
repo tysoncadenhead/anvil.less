@@ -8,12 +8,21 @@ module.exports = function( _, anvil ) {
 		},
 
 		configure: function( config, command, done ) {
+
+			anvil.config[ "anvil.combiner" ].patterns.push({
+				extensions: [ ".less" ],
+				alternateExtensions: [ ".css" ],
+				find: "/([@]).?import[(]?.?[\"'].*[\"'].?[)]?/g",
+				replace: "/([ \t]*)([@]).?import[(]?.?[\"']replace[\"'].?[)]?/g"
+			});
+
 			anvil.addCompiler( ".less", this );
 			done();
 		},
 
 		compile: function( content, done ) {
 			try {
+				anvil.log.debug(content);
 				var compile = less.render(
 					content,
 					anvil.config[ this.name ].options || {},

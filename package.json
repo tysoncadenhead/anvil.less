@@ -6,7 +6,7 @@
   },
   "name": "anvil.less",
   "description": "LESS plugin for anvil.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/brianedgerton/anvil.less.git"
@@ -24,6 +24,6 @@
   },
   "optionalDependencies": {},
   "readme": "## Anvil LESS Plugin\n\nThis plugin requires anvil.js version 0.8.* or greater.\n\n## Installation\n\n\tanvil install anvil.less\n\n## Usage\n\nIf this plugin is installed and enabled, it will automatically minify .js files using the uglify-js node library.\n\n### Minifying All The Things\nAdd the following snippet to the build.json:\n\n\t\"anvil.uglify\": {\n\t\t\"all\": \"true\"\n\t}\n\n### Inclusive Minification\nAdd the following snippet to the build.json to compile **only** the listed files:\n\n\t\"anvil.uglify\": {\n\t\t\"include\": [\n\t\t\t\"./path/to/file1\",\n\t\t\t\"./path/to/file2\",\n\t\t\t\"./path/to/file4\",\n\t\t]\n\t}\n\n### Exclusive Minification\nAdd the following snippet to the build.json to compile everything but the listed files:\n\n\t\"anvil.uglify\": {\n\t\t\"exclude\": [\n\t\t\t\"./path/to/file1\",\n\t\t\t\"./path/to/file2\",\n\t\t\t\"./path/to/file4\",\n\t\t]\n\t}",
-  "_id": "anvil.less@0.0.1",
+  "_id": "anvil.less@0.0.2",
   "_from": "anvil.less"
 }
